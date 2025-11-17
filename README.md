@@ -93,10 +93,9 @@ AUTH_TOKEN=xxxxxxxxxxxx
 
 ---
 
-## Sobre Dev
-
-Servidor simples e seguro em **Node.js** que protege **CLIENT_ID e Authorization Bearer Token** e faz requisições seguras para a e2payments.  
-Desenvolvido por: [Helioz Dev](https://api.whatsapp.com/send/?phone=258842834889&text&type=phone_number&app_absent=0&wame_ctl=1)
+## 👨‍💻 Desenvolvido por
+[Helioz Dev](https://api.whatsapp.com/send/?phone=258842834889&text&type=phone_number&app_absent=0&wame_ctl=1) — soluções práticas e seguras para integração com PayMoz.  
+> 💡 Personaliza livremente e integra facilmente nos teus próprios sistemas.
 
 ---
 
