@@ -94,7 +94,7 @@ AUTH_TOKEN=xxxxxxxxxxxx
 ---
 
 ## 👨‍💻 Desenvolvido por
-[Helioz Dev](https://api.whatsapp.com/send/?phone=258842834889&text&type=phone_number&app_absent=0&wame_ctl=1) — soluções práticas e seguras para integração com PayMoz.  
+[Helioz Dev](https://api.whatsapp.com/send/?phone=258842834889&text&type=phone_number&app_absent=0&wame_ctl=1) — soluções práticas e seguras para integração com e2payments.  
 > 💡 Personaliza livremente e integra facilmente nos teus próprios sistemas.
 
 ---
