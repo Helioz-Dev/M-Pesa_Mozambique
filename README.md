@@ -1,7 +1,7 @@
 
 # 🟦 M-Pesa Payment Proxy – Node.js
 
-Este projeto é um **servidor backend em Node.js** criado para executar pagamentos M-Pesa através da API da **e2Payments** de forma **segura**, sem expor dados sensíveis como:
+Este projeto é um **servidor backend em Node.js** criado para executar pagamentos M-Pesa através da API da **[e2Payments](https://e2payments.explicador.co.mz)** de forma **segura**, sem expor dados sensíveis como:
 
 - `client_id`  
 - `Authorization Bearer Token`
@@ -51,6 +51,7 @@ o aplicativo ou frontend envia apenas *phone*, *amount* e *reference*, e o servi
 - Axios
 - Deploy fácil (Como render.com)
 - GitHub (Repositório público)
+- [e2Payments](https://e2payments.explicador.co.mz)
 
 ---
 
