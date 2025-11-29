@@ -5,6 +5,7 @@ Este projeto é um **servidor backend em Node.js** criado para executar pagament
 
 - `client_id`  
 - `Authorization Bearer Token`
+- `wallet_id`
 
 O backend funciona como um **proxy seguro**:
 Desenvolvido por: [Helioz Dev](https://api.whatsapp.com/send/?phone=258842834889&text&type=phone_number&app_absent=0&wame_ctl=1)  
@@ -36,6 +37,7 @@ o aplicativo ou frontend envia apenas *phone*, *amount* e *reference*, e o servi
 2. O servidor adiciona automaticamente:
    - `client_id`
    - `Authorization Bearer Token`
+   - `wallet_id`
 
 3. O servidor chama a API da e2Payments.
 4. Retorna ao cliente o resultado do pagamento.
@@ -65,7 +67,8 @@ Crie um arquivo `.env` com:
 
 ```
 CLIENT_ID=xxxxxxxxxxxx
-AUTH_TOKEN=xxxxxxxxxxxx
+AUTH_TOKEN=xxxxxxxxxxx
+PAYMENT_ID=xxxxxxxxxxx
 ```
 
 ---
