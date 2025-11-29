@@ -14,7 +14,7 @@ app.post("/mpesa", async (req, res) => {
     }
 
     const response = await axios.post(
-      "https://e2payments.explicador.co.mz/v1/c2b/mpesa-payment/585916",
+      "https://e2payments.explicador.co.mz/v1/c2b/mpesa-payment/${process.env.PAYMENT_ID",
       {
         client_id: process.env.CLIENT_ID,
         phone,
