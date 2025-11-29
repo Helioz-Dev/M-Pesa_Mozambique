@@ -9,12 +9,9 @@ app.post("/mpesa", async (req, res) => {
   try {
     const { phone, amount, reference } = req.body;
 
-    if (!phone || !amount) {
-      return res.status(400).json({ error: true, message: "phone e amount são obrigatórios" });
-    }
-
+    // Envia a requisição diretamente para o servidor E2Payments
     const response = await axios.post(
-      "https://e2payments.explicador.co.mz/v1/c2b/mpesa-payment/${process.env.PAYMENT_ID",
+      `https://e2payments.explicador.co.mz/v1/c2b/mpesa-payment/${process.env.PAYMENT_ID}`,
       {
         client_id: process.env.CLIENT_ID,
         phone,
@@ -30,16 +27,17 @@ app.post("/mpesa", async (req, res) => {
       }
     );
 
-    return res.json(response.data);
+    // Retorna a resposta do E2Payments
+    return res.status(response.status).json(response.data);
 
   } catch (error) {
-    return res.status(500).json({
-      error: true,
-      message: error.response?.data || error.message
-    });
+    // Retorna o erro exato do E2Payments
+    if (error.response) {
+      return res.status(error.response.status).json(error.response.data);
+    }
+    return res.status(500).json({ error: true, message: error.message });
   }
 });
 
-// Porta exigida pelo Render
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log("Servidor iniciado na porta " + PORT));
