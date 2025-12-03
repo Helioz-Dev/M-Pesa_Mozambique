@@ -1,15 +1,17 @@
 import express from "express";
 import axios from "axios";
+import cors from "cors";
 
 const app = express();
+
+// CORS aberto para qualquer site
+app.use(cors()); // sem parâmetros = aceita todas as origens
 app.use(express.json());
 
-// Endpoint que seu app vai chamar
 app.post("/mpesa", async (req, res) => {
   try {
     const { phone, amount, reference } = req.body;
 
-    // Envia a requisição diretamente para o servidor E2Payments
     const response = await axios.post(
       `https://e2payments.explicador.co.mz/v1/c2b/mpesa-payment/${process.env.PAYMENT_ID}`,
       {
@@ -27,11 +29,8 @@ app.post("/mpesa", async (req, res) => {
       }
     );
 
-    // Retorna a resposta do E2Payments
     return res.status(response.status).json(response.data);
-
   } catch (error) {
-    // Retorna o erro exato do E2Payments
     if (error.response) {
       return res.status(error.response.status).json(error.response.data);
     }
